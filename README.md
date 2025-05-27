@@ -1,12 +1,12 @@
-# *Super Grid+*: Your Ultimate Virtual Tabletop for Epic RPG Adventures
+# ***Super Grid+***: Your Ultimate Virtual Tabletop for Epic RPG Adventures
 
-Hey there, adventurers! Ready to level up your tabletop RPG sessions? Meet **Super Grid+**, a sleek, web-based virtual tabletop that’s here to make your Dungeons & Dragons (or any RPG) campaigns absolutely legendary. Packed with features, a smooth interface, and a vibe that screams "ready for action," this app is your new go-to for immersive gaming. Let’s dive into what makes Super Grid+ so awesome!
+Hey there, adventurers! Ready to level up your tabletop RPG sessions? Meet ***Super Grid+***, a sleek, web-based virtual tabletop that’s here to make your Dungeons & Dragons (or any RPG) campaigns absolutely legendary. Packed with features, a smooth interface, and a vibe that screams "ready for action," this app is your new go-to for immersive gaming. Let’s dive into what makes Super Grid+ so awesome!
 
 —> —> https://eddev404.github.io/super-grid/ <— <— 
 
-## What’s the Deal with Super Grid+?
+## What’s the Deal with ***Super Grid+***?
 
-Super Grid+ is like having a fully loaded game master’s toolkit right in your browser. It’s designed to bring your RPG world to life with a digital board, draggable tokens, dice-rolling magic, and more. Whether you’re slaying dragons, exploring haunted dungeons, or just chilling with your party, this app has everything you need to keep the story flowing.
+***Super Grid+*** is like having a fully loaded game master’s toolkit right in your browser. It’s designed to bring your RPG world to life with a digital board, draggable tokens, dice-rolling magic, and more. Whether you’re slaying dragons, exploring haunted dungeons, or just chilling with your party, this app has everything you need to keep the story flowing.
 
 ### Core Features That Slay
 
@@ -17,13 +17,13 @@ Super Grid+ is like having a fully loaded game master’s toolkit right in your 
 - **Notes Panel**: Jot down campaign details, NPC secrets, or loot lists in a dedicated textarea. Never lose track of your story!
 - **Save & Load**: Save your entire board state — tokens, map, music, notes, and dice history—to local storage or export it as a JSON file. Load it back up anytime to pick up right where you left off.
 - **Fullscreen Mode**: Go big with a distraction-free fullscreen view. A draggable floating panel keeps all your controls handy without cluttering the board.
-- **Responsive Design**: Whether you’re on a desktop or a tablet, Super Grid+ adapts with a mobile-friendly layout that’s touch-ready and easy to navigate.
+- **Responsive Design**: Whether you’re on a desktop or a tablet, ***Super Grid+*** adapts with a mobile-friendly layout that’s touch-ready and easy to navigate.
 
 ## Why You’ll Love It
 
-Super Grid+ is built for both game masters and players who want a smooth, intuitive experience. The dark-themed interface is easy on the eyes, and the controls are snappy — zoom with your mouse wheel, pan by dragging, or use arrow keys for precision. Accessibility is on point with ARIA labels and focusable elements, so everyone can join the fun.
+***Super Grid+*** is built for both game masters and players who want a smooth, intuitive experience. The dark-themed interface is easy on the eyes, and the controls are snappy — zoom with your mouse wheel, pan by dragging, or use arrow keys for precision. Accessibility is on point with ARIA labels and focusable elements, so everyone can join the fun.
 
-The app’s got style, too. Hover effects, smooth transitions, and that dice animation? Pure eye candy (I'm just an apprentice - LMAO). Plus, the ability to upload custom maps and manage tokens of different sizes means you can craft *exactly* the encounter you envision. From a cozy tavern brawl to an epic showdown with a gargantuan dragon, Super Grid+ has your back.
+The app’s got style, too. Hover effects, smooth transitions, and that dice animation? Pure eye candy (I'm just an apprentice - LMAO). Plus, the ability to upload custom maps and manage tokens of different sizes means you can craft *exactly* the encounter you envision. From a cozy tavern brawl to an epic showdown with a gargantuan dragon, ***Super Grid+*** has your back.
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ The app’s got style, too. Hover effects, smooth transitions, and that dice ani
 
 ## What’s Next?
 
-Super Grid+ is already a powerhouse, but I’m just getting started to make it even more epic! I’m working on a bunch of exciting features to take your RPG sessions to the next level. Here’s what’s coming up:
+***Super Grid+*** is already a powerhouse, but I’m just getting started to make it even more epic! I’m working on a bunch of exciting features to take your RPG sessions to the next level. Here’s what’s coming up:
 
 - **Zoom Out Focal**: Smoothly zoom in and out from a specific point on the board for pinpoint control over your view (As soon as I figure out how to make it work properly, hehe).
 - **Multi-Selection**: Grab and move multiple tokens at once — perfect for repositioning your entire party in a flash.
@@ -51,6 +51,6 @@ Stay tuned — this adventure’s about to level up!
 
 ## Ready to Roll?
 
-Whether you’re a seasoned game master or a newbie adventurer, Super Grid+ is your ticket to unforgettable RPG sessions. Fire up your browser, grab your virtual dice, and start building your next epic tale. Let’s make some unforgettable moments at the (virtual) table!
+Whether you’re a seasoned game master or a newbie adventurer, ***Super Grid+*** is your ticket to unforgettable RPG sessions. Fire up your browser, grab your virtual dice, and start building your next epic tale. Let’s make some unforgettable moments at the (virtual) table!
 
 *Created by Eduardo Stigger with love for RPG fans everywhere.* 🌟
