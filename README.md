@@ -1,4 +1,4 @@
-# Super Grid+: Your Ultimate Virtual Tabletop for Epic RPG Adventures
+# *Super Grid+*: Your Ultimate Virtual Tabletop for Epic RPG Adventures
 
 Hey there, adventurers! Ready to level up your tabletop RPG sessions? Meet **Super Grid+**, a sleek, web-based virtual tabletop that’s here to make your Dungeons & Dragons (or any RPG) campaigns absolutely legendary. Packed with features, a smooth interface, and a vibe that screams "ready for action," this app is your new go-to for immersive gaming. Let’s dive into what makes Super Grid+ so awesome!
 
