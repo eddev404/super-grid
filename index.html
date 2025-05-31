@@ -693,6 +693,275 @@
             background-color: #007bff;
             box-shadow: 0 0 10px #007bff;
         }
+
+        /* Help Button */
+        #helpButton,
+        #helpButtonFloating {
+            background-color: #444;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            height: 36px;
+            box-sizing: border-box;
+            width: 90px;
+            text-align: center;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #helpButton:hover,
+        #helpButtonFloating:hover {
+            background-color: #c71585;
+            /* Magenta vibrante para hover */
+            box-shadow: 0 0 10px #c71585;
+        }
+
+        body.fullscreen #helpButtonFloating {
+            background: rgba(51, 51, 51, 0.7);
+        }
+
+        body.fullscreen #helpButtonFloating:hover {
+            background-color: rgba(199, 21, 133, 0.9);
+            /* Magenta com transparência em fullscreen */
+            box-shadow: 0 0 10px #c71585;
+        }
+
+        /* Help Modal */
+        #helpModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #helpModal .modal-content {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            width: 400px;
+            max-width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        #helpModal h3 {
+            margin: 0 0 10px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        #helpModal p {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        #helpModal ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #fff;
+        }
+
+        #helpModal li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        #helpModal kbd {
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 3px;
+            padding: 2px 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        #closeHelpModal {
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        #closeHelpModal:hover {
+            background-color: #007bff;
+            /* Azul consistente com o botão "Não" do resetModal */
+            box-shadow: 0 0 10px #007bff;
+        }
+
+        @media (max-width: 768px) {
+            #helpModal .modal-content {
+                width: 300px;
+                font-size: 14px;
+            }
+
+            #helpModal h3 {
+                font-size: 16px;
+            }
+
+            #helpModal li {
+                font-size: 12px;
+            }
+
+            #helpButton,
+            #helpButtonFloating {
+                width: 80px;
+                font-size: 12px;
+                padding: 8px 6px;
+            }
+        }
+
+        /* Título Mágico */
+        .magic-title {
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: wave 3s linear infinite;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+        }
+
+        @keyframes wave {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 200%;
+            }
+        }
+
+        /* Efeito de Brilho Estelar */
+        .sparkle {
+            position: relative;
+            color: #fff;
+            animation: sparkle 2s ease-in-out infinite;
+            text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff;
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+            }
+
+            50% {
+                text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+            }
+        }
+
+        /* Efeito de Gradiente Animado */
+        .glow {
+            background: linear-gradient(90deg, #ff00ff, #00ff00, #00ffff, #ff00ff);
+            background-size: 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glow 4s linear infinite;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        /* Efeito de Gradiente Estático com Pulsação */
+        .gradient {
+            background: linear-gradient(45deg, #ff1493, #00b7eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Reduzir animações para acessibilidade */
+        @media (prefers-reduced-motion: reduce) {
+
+            .magic-title,
+            .sparkle,
+            .glow,
+            .gradient {
+                animation: none;
+                text-shadow: none;
+                color: #fff;
+                background: none;
+            }
+        }
+
+        /* Ajustes no modal para suportar os efeitos */
+        #helpModal .modal-content {
+            background: #222;
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+        }
+
+        #helpModal p,
+        #helpModal li {
+            color: #ddd;
+        }
+
+        #helpModal kbd {
+            background: #333;
+            border: 1px solid #00ffff;
+            color: #00ffff;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .magic-title {
+                font-size: 16px;
+            }
+
+            .sparkle,
+            .glow,
+            .gradient {
+                font-size: 12px;
+            }
+
+            #helpModal .modal-content {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -839,6 +1108,61 @@
                     <img src="./source/portrait/portrait-46.png" class="token" draggable="false">
                     <img src="./source/portrait/portrait-47.png" class="token" draggable="false">
                     <img src="./source/portrait/portrait-48.png" class="token" draggable="false">
+                </div>
+            </div>
+        </div>
+        <div class="collapsible-section">
+            <button class="collapsible">Modern ▾</button>
+            <div class="content">
+                <div class="token-list" id="modernTokens">
+                    <img src="./source/modern/modern-1.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-2.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-3.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-4.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-5.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-6.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-7.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-8.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-9.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-10.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-11.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-12.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-13.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-14.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-15.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-16.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-17.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-18.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-19.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-20.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-21.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-22.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-23.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-24.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-25.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-26.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-27.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-28.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-29.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-30.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-31.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-32.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-33.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-34.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-35.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-36.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-37.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-38.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-39.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-40.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-41.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-42.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-43.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-44.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-45.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-46.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-47.png" class="token" draggable="false">
+                    <img src="./source/modern/modern-48.png" class="token" draggable="false">
                 </div>
             </div>
         </div>
@@ -1254,6 +1578,11 @@
                 </div>
             </div>
         </div>
+
+        <div class="line-line">
+            <button id="helpButton">Help </button>
+        </div>
+
     </div>
     <div class="floating-panel" id="floatingPanel">
         <button class="panel-collapsible">Menu ▾</button>
@@ -1270,6 +1599,11 @@
                     <label class="load-btn" id="loadBoardFloating">Load<input type="file" id="loadBoardFloatingInput"
                             accept="application/json"></label>
                 </div>
+
+                <div class="line-line">
+                    <button id="helpButtonFloating">Help </button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -1297,6 +1631,60 @@
             <div class="modal-buttons">
                 <button id="confirmResetYes">Sim</button>
                 <button id="confirmResetNo">Não</button>
+            </div>
+        </div>
+    </div>
+    <div id="helpModal">
+        <div class="modal-content">
+            <h3 class="magic-title">Super Grid+ Guide</h3>
+            <p>Welcome to the <span class="sparkle">dazzling</span> Super Grid+! Unleash your imagination with these
+                <span class="glow">epic</span> features:
+            </p>
+            <ul>
+                <li><strong><span class="gradient">Token Selection</span>:</strong> Click a <span
+                        class="sparkle">token</span> (heroes, monsters, etc.) in the side panel to select it. The chosen
+                    one glows with a <span class="glow">red border</span>.</li>
+                <li><strong><span class="gradient">Token Placement</span>:</strong> Click a map cell to place your <span
+                        class="sparkle">token</span>. Hold <kbd>Shift</kbd> to scatter <span class="glow">multiple
+                        tokens</span> without deselecting.</li>
+                <li><strong><span class="gradient">Token Flipping</span>:</strong> Double-click a <span
+                        class="sparkle">token</span> on the map to <span class="glow">flip it horizontally</span> with a
+                    magical twist.</li>
+                <li><strong><span class="gradient">Token Removal</span>:</strong> Right-click a <span
+                        class="sparkle">token</span> on the map to make it <span class="glow">vanish</span>.</li>
+                <li><strong><span class="gradient">Map Panel</span>:</strong>
+                    <ul>
+                        <li><strong><span class="sparkle">Upload Map</span>:</strong> Conjure a <span
+                                class="glow">custom image</span> for the map’s mystical background.</li>
+                        <li><strong><span class="sparkle">Reset</span>:</strong> Banish all <span
+                                class="glow">tokens</span> from the map (confirm in the arcane modal).</li>
+                        <li><strong><span class="sparkle">Full Screen</span>:</strong> Dive into <span
+                                class="glow">full-screen mode</span>, summoning a floating panel of wonders.</li>
+                        <li><strong><span class="sparkle">Save</span>:</strong> Capture the map’s <span
+                                class="glow">essence</span> (tokens, music, notes) as a JSON scroll.</li>
+                        <li><strong><span class="sparkle">Load</span>:</strong> Resurrect a saved state from a <span
+                                class="glow">JSON scroll</span>.</li>
+                    </ul>
+                </li>
+                <li><strong><span class="gradient">Music</span>:</strong> Choose a <span
+                        class="sparkle">soundtrack</span> from the dropdown to weave a <span class="glow">looping
+                        spell</span> of ambiance.</li>
+                <li><strong><span class="gradient">Dice Rolling</span>:</strong> Select the type and number of <span
+                        class="sparkle">dice</span>, add a modifier, and cast them with <span class="glow">“Roll
+                        Dice”</span>. Results shimmer on the map and in the chronicle.</li>
+                <li><strong><span class="gradient">Notes</span>:</strong> Inscribe your <span class="sparkle">session’s
+                        lore</span> in the notes panel.</li>
+                <li><strong><span class="gradient">Map Navigation</span>:</strong>
+                    <ul>
+                        <li><strong><span class="sparkle">Pan</span>:</strong> Drag the map with a <span
+                                class="glow">mystic touch</span> or use the arrow keys.</li>
+                        <li><strong><span class="sparkle">Zoom</span>:</strong> Spin the mouse wheel to <span
+                                class="glow">magnify or shrink</span> the realm (0.4x to 2x).</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="modal-buttons">
+                <button id="closeHelpModal">Close</button>
             </div>
         </div>
     </div>
@@ -2152,6 +2540,34 @@
         loadBoardInputFloating.addEventListener("change", importBoardState);
 
         loadBoardState();
+
+        // Elementos do modal de ajuda
+        const helpButton = document.getElementById("helpButton");
+        const helpButtonFloating = document.getElementById("helpButtonFloating");
+        const helpModal = document.getElementById("helpModal");
+        const closeHelpModal = document.getElementById("closeHelpModal");
+
+        // Função para abrir o modal de ajuda
+        function openHelpModal() {
+            helpModal.style.display = "flex";
+        }
+
+        // Função para fechar o modal de ajuda
+        function closeHelpModalFn() {
+            helpModal.style.display = "none";
+        }
+
+        // Event listeners
+        helpButton.addEventListener("click", openHelpModal);
+        helpButtonFloating.addEventListener("click", openHelpModal);
+        closeHelpModal.addEventListener("click", closeHelpModalFn);
+
+        // Fechar o modal ao clicar fora do conteúdo
+        helpModal.addEventListener("click", (e) => {
+            if (e.target === helpModal) {
+                closeHelpModalFn();
+            }
+        });
     </script>
 </body>
 
