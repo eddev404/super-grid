@@ -497,8 +497,11 @@
             gap: 8px;
             width: 100%;
             justify-content: center;
+            align-items: center;
+            /* Garante centralização horizontal */
             margin-bottom: 10px;
         }
+
 
         .floating-panel .line-line {
             background: transparent;
@@ -716,9 +719,9 @@
 
         #helpButton:hover,
         #helpButtonFloating:hover {
-            background-color: #c71585;
+            background-color: rgba(0, 255, 255, 0.9);
             /* Magenta vibrante para hover */
-            box-shadow: 0 0 10px #c71585;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.9);
         }
 
         body.fullscreen #helpButtonFloating {
@@ -726,9 +729,9 @@
         }
 
         body.fullscreen #helpButtonFloating:hover {
-            background-color: rgba(199, 21, 133, 0.9);
+            background-color: rgba(0, 255, 255, 0.9);
             /* Magenta com transparência em fullscreen */
-            box-shadow: 0 0 10px #c71585;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.9);
         }
 
         /* Help Modal */
@@ -802,9 +805,9 @@
         }
 
         #closeHelpModal:hover {
-            background-color: #007bff;
+            background-color: #ff0008;
             /* Azul consistente com o botão "Não" do resetModal */
-            box-shadow: 0 0 10px #007bff;
+            box-shadow: 0 0 10px #ff0008;
         }
 
         @media (max-width: 768px) {
@@ -997,10 +1000,14 @@
             </div>
             <div class="button-row-bottom">
                 <button id="saveBoard">Save</button>
+                <button id="helpButton">Help </button>
                 <label class="load-btn" id="loadBoard">Load<input type="file" id="loadBoardInput"
                         accept="application/json"></label>
-            </div>
+            </div>            
         </div>
+        <!-- <div class="line-line">
+            
+        </div> -->
         <div class="collapsible-section">
             <button class="collapsible">Heroes ▾</button>
             <div class="content">
@@ -1557,6 +1564,8 @@
                 <div class="dice-roller" id="diceRoller">
                     <label for="diceCount">Number of Dice:</label>
                     <input type="number" id="diceCount" min="1" value="1" aria-label="Number of dice to roll">
+                    <label for="diceModifier">Modifier:</label>
+                    <input type="number" id="diceModifier" value="0" aria-label="Dice roll modifier">
                     <label for="diceType">Dice Type:</label>
                     <select id="diceType" aria-label="Select dice type">
                         <option value="4">d4</option>
@@ -1566,9 +1575,7 @@
                         <option value="100">d10%</option>
                         <option value="12">d12</option>
                         <option value="20">d20</option>
-                    </select>
-                    <label for="diceModifier">Modifier:</label>
-                    <input type="number" id="diceModifier" value="0" aria-label="Dice roll modifier">
+                    </select>                    
                     <button id="rollDice">Roll Dice</button>
                     <textarea id="diceResult" readonly aria-label="Dice roll results"></textarea>
                     <audio id="diceSound" preload="auto">
@@ -1578,11 +1585,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="line-line">
-            <button id="helpButton">Help </button>
-        </div>
-
     </div>
     <div class="floating-panel" id="floatingPanel">
         <button class="panel-collapsible">Menu ▾</button>
@@ -1596,17 +1598,19 @@
                 </div>
                 <div class="button-row-bottom">
                     <button id="saveBoardFloating">Save</button>
-                    <label class="load-btn" id="loadBoardFloating">Load<input type="file" id="loadBoardFloatingInput"
-                            accept="application/json"></label>
-                </div>
-
-                <div class="line-line">
                     <button id="helpButtonFloating">Help </button>
+                    <label class="load-btn" id="loadBoardFloating">Load<input type="file" id="loadBoardFloatingInput"
+                           accept="application/json">
+                    </label>
                 </div>
-
+                <!-- <div class="line-line">
+                        
+                    </div> -->
+                
             </div>
         </div>
     </div>
+    
     <main>
         <div id="board-container" aria-label="Área do grid, arraste com o mouse ou use as setas para navegar"
             tabindex="0">
@@ -1637,7 +1641,7 @@
     <div id="helpModal">
         <div class="modal-content">
             <h3 class="magic-title">Super Grid+ Guide</h3>
-            <p>Welcome to the <span class="sparkle">dazzling</span> Super Grid+! Unleash your imagination with these
+            <p>Welcome to the <span class="sparkle">dazzling</span> Super Grid+ <br> Unleash your imagination with these
                 <span class="glow">epic</span> features:
             </p>
             <ul>
@@ -2332,37 +2336,37 @@
         });
 
         function toggleFullscreen() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().then(() => {
-                    document.body.classList.add("fullscreen");
-                    toggleFullscreenButton.textContent = "Exit Full Screen";
-                    toggleFullscreenButtonFloating.textContent = "Exit Full Screen";
-                    const collapsibleSections = document.querySelectorAll(".collapsible-section");
-                    const panelContent = floatingPanel.querySelector(".panel-content");
-                    collapsibleSections.forEach(section => {
-                        panelContent.appendChild(section);
-                    });
-                    if (floatingPanel.classList.contains("collapsed")) {
-                        panelCollapsible.click();
-                    }
-                    floatingPanel.style.left = "10px";
-                    floatingPanel.style.top = "10px";
-                });
-            } else {
-                document.exitFullscreen().then(() => {
-                    document.body.classList.remove("fullscreen");
-                    toggleFullscreenButton.textContent = "Full Screen";
-                    toggleFullscreenButtonFloating.textContent = "Full Screen";
-                    const sidePanel = document.querySelector(".side-panel");
-                    const collapsibleSections = document.querySelectorAll(".collapsible-section");
-                    collapsibleSections.forEach(section => {
-                        sidePanel.appendChild(section);
-                    });
-                    floatingPanel.style.left = "10px";
-                    floatingPanel.style.top = "10px";
-                });
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().then(() => {
+            document.body.classList.add("fullscreen");
+            toggleFullscreenButton.textContent = "Exit Full Screen";
+            toggleFullscreenButtonFloating.textContent = "Exit Full Screen";
+            const collapsibleSections = document.querySelectorAll(".collapsible-section");
+            const panelContent = floatingPanel.querySelector(".panel-content");
+            collapsibleSections.forEach(section => {
+                panelContent.appendChild(section);
+            });
+            if (floatingPanel.classList.contains("collapsed")) {
+                panelCollapsible.click();
             }
-        }
+            floatingPanel.style.left = "10px";
+            floatingPanel.style.top = "10px";
+        });
+    } else {
+        document.exitFullscreen().then(() => {
+            document.body.classList.remove("fullscreen");
+            toggleFullscreenButton.textContent = "Full Screen";
+            toggleFullscreenButtonFloating.textContent = "Full Screen";
+            const sidePanel = document.querySelector(".side-panel");
+            const collapsibleSections = document.querySelectorAll(".collapsible-section");
+            collapsibleSections.forEach(section => {
+                sidePanel.appendChild(section);
+            });
+            floatingPanel.style.left = "10px";
+            floatingPanel.style.top = "10px";
+        });
+    }
+}
 
         toggleFullscreenButton.addEventListener("click", toggleFullscreen);
         toggleFullscreenButtonFloating.addEventListener("click", toggleFullscreen);
@@ -2547,16 +2551,30 @@
         const helpModal = document.getElementById("helpModal");
         const closeHelpModal = document.getElementById("closeHelpModal");
 
-        // Função para abrir o modal de ajuda
         function openHelpModal() {
             helpModal.style.display = "flex";
+            const modalContent = helpModal.querySelector(".modal-content");
+            modalContent.style.transform = "scale(0.7)";
+            modalContent.style.opacity = "0";
+            setTimeout(() => {
+                modalContent.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+                modalContent.style.transform = "scale(1)";
+                modalContent.style.opacity = "1";
+            }, 10);
         }
 
         // Função para fechar o modal de ajuda
         function closeHelpModalFn() {
-            helpModal.style.display = "none";
+            const modalContent = helpModal.querySelector(".modal-content");
+            modalContent.style.transform = "scale(0.7)";
+            modalContent.style.opacity = "0";
+            setTimeout(() => {
+                helpModal.style.display = "none";
+                modalContent.style.transition = "";
+                modalContent.style.transform = "";
+                modalContent.style.opacity = "";
+            }, 300);
         }
-
         // Event listeners
         helpButton.addEventListener("click", openHelpModal);
         helpButtonFloating.addEventListener("click", openHelpModal);
